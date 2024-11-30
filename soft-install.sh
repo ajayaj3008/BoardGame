@@ -57,7 +57,7 @@ sudo ./aws/install
 jenkins ALL=(ALL) NOPASSWD: ALL
 
 Plugins
-Eclipse Temurin JDK
+Eclipse Temurin installer
 Pipeline Maven
 Config File Provider:
 SonarQube Scanner:
