@@ -10,7 +10,6 @@ pipeline {
                 git 'https://github.com/ajayaj3008/BoardGame.git'
             }
         }
-    }
         stage('Compile') {
             steps {
                 sh 'mvn compile'
@@ -22,4 +21,6 @@ pipeline {
                 sh 'mvn test'
             }
         }
+
+    }
 }
