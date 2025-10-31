@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'maven3'
+    }
 
     stages {
         stage('Git Checkout') {
@@ -9,4 +11,15 @@ pipeline {
             }
         }
     }
+        stage('Compile') {
+            steps {
+                sh 'mvn compile'
+                echo 'GITHUB Webhook Configured'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
 }
